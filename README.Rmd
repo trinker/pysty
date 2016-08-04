@@ -1,0 +1,88 @@
+---
+title: "pysty"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  md_document:
+    toc: true      
+---
+
+```{r, echo=FALSE}
+desc <- suppressWarnings(readLines("DESCRIPTION"))
+regex <- "(^Version:\\s+)(\\d+\\.\\d+\\.\\d+)"
+loc <- grep(regex, desc)
+ver <- gsub(regex, "\\2", desc[loc])
+verbadge <- sprintf('<a href="https://img.shields.io/badge/Version-%s-orange.svg"><img src="https://img.shields.io/badge/Version-%s-orange.svg" alt="Version"/></a></p>', ver, ver)
+````
+
+[![Build Status](https://travis-ci.org/trinker/pysty.svg?branch=master)](https://travis-ci.org/trinker/pysty)
+[![Coverage Status](https://coveralls.io/repos/trinker/pysty/badge.svg?branch=master)](https://coveralls.io/r/trinker/pysty?branch=master)
+`r verbadge`
+
+**pysty** a Python style packages importing using the common forms of: `import PACKAGE`, `import PACKAGE as ALIAS`, or `from PACKAGE import FUN1, FUN2, FUN_N`.  The latter even allows for importing non-exported functions into the global environment.  
+
+This package is a proof of concept that such light weight importing and aliasing could be possible.  A user would use **pysty** because one wants to be explicit in all the functions used in a script as to what package they come from.  Aliasing package names is convenient for longer named packages.
+
+# Installation
+
+To download the development version of **pysty**:
+
+Download the [zip ball](https://github.com/trinker/pysty/zipball/master) or [tar ball](https://github.com/trinker/pysty/tarball/master), decompress and run `R CMD INSTALL` on it, or use the **pacman** package to install the development version:
+
+```r
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load_gh("trinker/pysty")
+```
+
+# Contact
+
+You are welcome to:    
+- submit suggestions and bug-reports at: <https://github.com/trinker/pysty/issues>    
+- send a pull request on: <https://github.com/trinker/pysty/>    
+- compose a friendly e-mail to: <tyler.rinker@gmail.com>    
+
+# Functions
+
+There are only a few functions in the package: 
+
+| Function                     |   Description                                      |
+|------------------------------|--------------|-------------------------------------|
+| `add_imports`                | Python style importing          |
+| `clear_imports`              | Remove a named import(s) or all imports          |
+| `get_imports`                | See imported packages          |
+| `get_imports_functions`      | See imported functions          |
+
+
+
+# Usage
+
+```
+library(pysty)
+
+add_imports('
+
+import dplyr as dp
+import ggplot2 as gg
+import tidyr
+from plyr import l_ply, rbind.fill
+
+')
+
+l_ply
+dp::arrange
+dp:::wrap
+ls()
+
+get_imports()
+get_imports_functions()
+
+clear_imports()
+
+## It's all gone
+l_ply
+dp::arrange
+dp:::wrap
+ls()
+
+get_imports()
+get_imports_functions()
+```
