@@ -1,8 +1,6 @@
--   [Installation](#installation)
--   [Contact](#contact)
--   [Functions](#functions)
--   [Usage](#usage)
-    -   [It's all gone: Try it!](#its-all-gone-try-it)
+pysty   [![Follow](https://img.shields.io/twitter/follow/tylerrinker.svg?style=social)](https://twitter.com/intent/follow?screen_name=tylerrinker)
+============
+
 
 [![Build
 Status](https://travis-ci.org/trinker/pysty.svg?branch=master)](https://travis-ci.org/trinker/pysty)
@@ -21,8 +19,19 @@ to be explicit in all the functions used in a script as to what package
 they come from. Aliasing package names is convenient for longer named
 packages.
 
+
+Table of Contents
+============
+
+-   [Installation](#installation)
+-   [Contact](#contact)
+-   [Functions](#functions)
+-   [Usage](#usage)
+    -   [It's all gone: Try it!](#its-all-gone-try-it)
+
 Installation
 ============
+
 
 To download the development version of **pysty**:
 
@@ -37,11 +46,10 @@ to install the development version:
 Contact
 =======
 
-You are welcome to:  
-- submit suggestions and bug-reports at:
-<https://github.com/trinker/pysty/issues>  
-- send a pull request on: <https://github.com/trinker/pysty/>  
-- compose a friendly e-mail to: <tyler.rinker@gmail.com>
+You are welcome to:    
+- submit suggestions and bug-reports at: <https://github.com/trinker/pysty/issues>    
+- send a pull request on: <https://github.com/trinker/pysty/>    
+- compose a friendly e-mail to: <tyler.rinker@gmail.com>    
 
 Functions
 =========
