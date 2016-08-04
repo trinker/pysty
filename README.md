@@ -27,6 +27,7 @@ Table of Contents
 -   [Contact](#contact)
 -   [Functions](#functions)
 -   [Usage](#usage)
+    -   [It's all gone: Try it!](#its-all-gone-try-it)
 
 Installation
 ============
@@ -97,16 +98,109 @@ Usage
     ')
 
     l_ply
+
+    ## function (.data, .fun = NULL, ..., .progress = "none", .inform = FALSE, 
+    ##     .print = FALSE, .parallel = FALSE, .paropts = NULL) 
+    ## {
+    ##     if (is.character(.fun) || is.list(.fun)) 
+    ##         .fun <- each(.fun)
+    ##     if (!is.function(.fun)) 
+    ##         stop(".fun is not a function.")
+    ##     pieces <- as.list(.data)
+    ##     n <- length(pieces)
+    ##     if (n == 0) 
+    ##         return(invisible())
+    ##     if (.parallel && .progress != "none") {
+    ##         message("Progress disabled when using parallel plyr")
+    ##         .progress <- "none"
+    ##     }
+    ##     progress <- create_progress_bar(.progress)
+    ##     progress$init(n)
+    ##     on.exit(progress$term())
+    ##     if (.parallel && .print) {
+    ##         message("Printing disabled for parallel processing")
+    ##         .print <- FALSE
+    ##     }
+    ##     do.ply <- function(i) {
+    ##         piece <- pieces[[i]]
+    ##         if (.inform) {
+    ##             res <- try(.fun(piece, ...))
+    ##             if (inherits(res, "try-error")) {
+    ##                 piece <- paste(utils::capture.output(print(piece)), 
+    ##                   collapse = "\n")
+    ##                 stop("with piece ", i, ": \n", piece, call. = FALSE)
+    ##             }
+    ##         }
+    ##         else {
+    ##             res <- .fun(piece, ...)
+    ##         }
+    ##         if (.print) {
+    ##             print(res)
+    ##         }
+    ##         progress$step()
+    ##     }
+    ##     if (.parallel) {
+    ##         setup_parallel()
+    ##         .paropts$.combine <- function(...) NULL
+    ##         i <- seq_len(n)
+    ##         fe_call <- as.call(c(list(quote(foreach::foreach), i = i), 
+    ##             .paropts))
+    ##         fe <- eval(fe_call)
+    ##         foreach::`%dopar%`(fe, do.ply(i))
+    ##     }
+    ##     else {
+    ##         for (i in seq_len(n)) {
+    ##             do.ply(i)
+    ##         }
+    ##     }
+    ##     invisible()
+    ## }
+    ## <environment: namespace:plyr>
+
     dp::arrange
+
+    ## function (.data, ...) 
+    ## {
+    ##     arrange_(.data, .dots = lazyeval::lazy_dots(...))
+    ## }
+    ## <environment: namespace:dplyr>
+
     dp:::wrap
+
+    ## function (..., indent = 0) 
+    ## {
+    ##     x <- paste0(..., collapse = "")
+    ##     wrapped <- strwrap(x, indent = indent, exdent = indent + 
+    ##         2, width = getOption("width"))
+    ##     paste0(wrapped, collapse = "\n")
+    ## }
+    ## <environment: namespace:dplyr>
+
     ls()
 
+    ##  [1] "contact"        "desc"           "l_ply"          "loc"           
+    ##  [5] "md_toc"         "rbind.fill"     "regex"          "twitter"       
+    ##  [9] "update_date"    "update_news"    "update_version" "ver"           
+    ## [13] "verbadge"
+
     get_imports()
+
+    ##   package alias
+    ## 1   dplyr    dp
+    ## 2 ggplot2    gg
+    ## 3   tidyr tidyr
+
     get_imports_functions()
+
+    ##   package      alias
+    ## 1    plyr rbind.fill
+    ## 2    plyr      l_ply
 
     clear_imports()
 
-    ## It's all gone
+It's all gone: Try it!
+----------------------
+
     l_ply
     dp::arrange
     dp:::wrap

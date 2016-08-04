@@ -55,7 +55,7 @@ There are only a few functions in the package:
 
 # Usage
 
-```
+```{r}
 library(pysty)
 
 add_imports('
@@ -76,8 +76,11 @@ get_imports()
 get_imports_functions()
 
 clear_imports()
+```
 
-## It's all gone
+## It's all gone: Try it!
+
+```r
 l_ply
 dp::arrange
 dp:::wrap
