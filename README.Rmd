@@ -18,7 +18,7 @@ verbadge <- sprintf('<a href="https://img.shields.io/badge/Version-%s-orange.svg
 [![Coverage Status](https://coveralls.io/repos/trinker/pysty/badge.svg?branch=master)](https://coveralls.io/r/trinker/pysty?branch=master)
 `r verbadge`
 
-**pysty** a Python style packages importing using the common forms of: `import PACKAGE`, `import PACKAGE as ALIAS`, or `from PACKAGE import FUN1, FUN2, FUN_N`.  The latter even allows for importing non-exported functions into the global environment.  
+**pysty** is a Python style packages importing using the common forms of: `import PACKAGE`, `import PACKAGE as ALIAS`, or `from PACKAGE import FUN1, FUN2, FUN_N`.  The latter even allows for importing non-exported functions into the global environment.  
 
 This package is a proof of concept that such light weight importing and aliasing could be possible.  A user would use **pysty** because one wants to be explicit in all the functions used in a script as to what package they come from.  Aliasing package names is convenient for longer named packages.
 

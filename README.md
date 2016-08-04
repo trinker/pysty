@@ -8,8 +8,8 @@ Status](https://travis-ci.org/trinker/pysty.svg?branch=master)](https://travis-c
 Status](https://coveralls.io/repos/trinker/pysty/badge.svg?branch=master)](https://coveralls.io/r/trinker/pysty?branch=master)
 <a href="https://img.shields.io/badge/Version-0.0.1-orange.svg"><img src="https://img.shields.io/badge/Version-0.0.1-orange.svg" alt="Version"/></a>
 </p>
-**pysty** a Python style packages importing using the common forms of:
-`import PACKAGE`, `import PACKAGE as ALIAS`, or
+**pysty** is a Python style packages importing using the common forms
+of: `import PACKAGE`, `import PACKAGE as ALIAS`, or
 `from PACKAGE import FUN1, FUN2, FUN_N`. The latter even allows for
 importing non-exported functions into the global environment.
 
@@ -19,8 +19,18 @@ to be explicit in all the functions used in a script as to what package
 they come from. Aliasing package names is convenient for longer named
 packages.
 
+
+Table of Contents
+============
+
+-   [Installation](#installation)
+-   [Contact](#contact)
+-   [Functions](#functions)
+-   [Usage](#usage)
+
 Installation
 ============
+
 
 To download the development version of **pysty**:
 
@@ -40,18 +50,8 @@ You are welcome to:
 - send a pull request on: <https://github.com/trinker/pysty/>    
 - compose a friendly e-mail to: <tyler.rinker@gmail.com>    
 
-
-Table of Contents
-============
-
--   [Installation](#installation)
--   [Contact](#contact)
--   [Functions](#functions)
--   [Usage](#usage)
-
 Functions
-============
-
+=========
 
 There are only a few functions in the package:
 
