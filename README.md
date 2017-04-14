@@ -8,6 +8,7 @@ Status](https://travis-ci.org/trinker/pysty.svg?branch=master)](https://travis-c
 Status](https://coveralls.io/repos/trinker/pysty/badge.svg?branch=master)](https://coveralls.io/r/trinker/pysty?branch=master)
 <a href="https://img.shields.io/badge/Version-0.0.1-orange.svg"><img src="https://img.shields.io/badge/Version-0.0.1-orange.svg" alt="Version"/></a>
 </p>
+
 **pysty** is a Python style packages importing using the common forms
 of: `import PACKAGE`, `import PACKAGE as ALIAS`, or
 `from PACKAGE import FUN1, FUN2, FUN_N`. The latter even allows for
