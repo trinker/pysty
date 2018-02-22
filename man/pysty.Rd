@@ -2,8 +2,8 @@
 % Please edit documentation in R/pysty-package.R
 \docType{package}
 \name{pysty}
-\alias{package-pysty}
 \alias{pysty}
+\alias{package-pysty}
 \alias{pysty-package}
 \title{\pkg{Python} Style Package Importing}
 \description{
@@ -11,4 +11,3 @@
 \code{import PACKAGE}, \code{import PACKAGE as ALIAS}, or
 \code{from PACKAGE import FUN1, FUN2, FUN_N}.
 }
-

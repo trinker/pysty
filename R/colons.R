@@ -1,6 +1,6 @@
 #' Double & Triple Colon Operators
 #'
-#' Replaces the \pkg{base} colon operators with \pkg{pysty} varients that allow for
+#' Replaces the \pkg{base} colon operators with \pkg{pysty} variants that allow for
 #' aliased package names.
 #'
 #' @param x A package or \pkg{pysty} alias.

@@ -22,4 +22,3 @@ add_imports('from lattice import xyplot, qq')
 get_imports_functions()
 }
 }
-

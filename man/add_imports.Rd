@@ -69,4 +69,3 @@ clear_imports()
 \seealso{
 \code{\link[utils]{install.packages}}
 }
-

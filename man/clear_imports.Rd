@@ -31,4 +31,3 @@ get_imports(); get_imports_functions();ls(pattern='^(qq|xyplot)$')
 \code{\link[base]{assign}},
 \code{\link[base]{get}}
 }
-

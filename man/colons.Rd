@@ -15,7 +15,7 @@
 \item{y}{A function (exported or non-exported) in that package.}
 }
 \description{
-Replaces the \pkg{base} colon operators with \pkg{pysty} varients that allow for
+Replaces the \pkg{base} colon operators with \pkg{pysty} variants that allow for
 aliased package names.
 }
 \examples{
@@ -28,4 +28,3 @@ lat:::wireframe.matrix
 \seealso{
 \code{\link[base]{::}}
 }
-
