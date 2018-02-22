@@ -5,6 +5,7 @@
 #' @param topic Usually, a name or character string specifying the topic for which help is sought.
 #' @param \ldots ignored.
 #' @export
+#' @importFrom utils help
 #' @examples
 #' \dontrun{
 #' library(pysty)
